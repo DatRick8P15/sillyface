@@ -11,10 +11,12 @@ import {
   Linking,
   ActivityIndicator,
    Button, 
-   Image
+   Image,
+   ImageBackground
 } from 'react-native';
 import { NavigationContainer,useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+//import { useFonts } from '@expo-google-fonts/inter';
 
 import LinearGradient from 'expo-linear-gradient';
 
@@ -26,6 +28,7 @@ export default function Home({navigation}) {
     const [name, setName] = useState('Patrick');
     return (
     <SafeAreaView style={styles.container}>
+      <ImageBackground source={require('../images/1.png')} style={styles.background}>
     <View style={styles.body}>
       <Image
         source={require('../images/1.png')}
@@ -66,6 +69,7 @@ export default function Home({navigation}) {
         />
       </View>
     </View>
+    </ImageBackground>
   </SafeAreaView>
   );
 }
@@ -73,11 +77,10 @@ export default function Home({navigation}) {
 const styles = StyleSheet.create({
     container: { 
     flex: 1, 
+    flexDirection: 'column', 
     backgroundColor: 'white',
     alignItems: 'stretch', 
     justifyContent: 'flex-start', 
-     
-    
     borderColor: '#777',
     borderRadius: 20,
     padding: 10,
@@ -100,6 +103,11 @@ const styles = StyleSheet.create({
     margin: 10,
     textAlign: 'center',
     textShadowColor: 'grey',
+  },
+  background: {
+    flex: 1,
+    resizeMode: 'cover',
+    justifyContent: 'center',
   },
   helpbutton: {
     width: 150,
