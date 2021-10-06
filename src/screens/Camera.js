@@ -81,23 +81,24 @@ const styles = StyleSheet.create({
     body: {
         flex: 1,
     },
-    preview: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'flex-end',
-    },
     container: {
+        flex: 1,
         width: 300,
         height: 800
     },
     camera: {
+        flex: 1,
         width: 300,
         height: 800
     },
     buttonContainer: {
-        
+        flex: 1,
+        backgroundColor: 'transparent',
+        flexDirection: 'row',
     },
     button: {
-        
+        flex: 0.1,
+        alignSelf: 'flex-end',
+        alignItems: 'center',
     }
 });

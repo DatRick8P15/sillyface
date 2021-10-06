@@ -59,7 +59,7 @@ export default function App() {
     
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Overview' }} />
+        <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Photo Box' }} />
         <Stack.Screen name="Help" component={HelpScreen} />
         <Stack.Screen name="Camera" component={CameraScreen} />
       </Stack.Navigator>
@@ -70,7 +70,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#f8f8f0',
     alignItems: 'center',
     justifyContent: 'center',
   },

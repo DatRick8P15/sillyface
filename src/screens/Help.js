@@ -21,27 +21,25 @@ const DATA = [
   {
     title: "Silly Faces - Photobox",
     data: [
-      "Q: What is this app for? A: With this app you will be able to snap some unique Photos!", 
-      "Q: Can I send those Photos A: You can send them via Instagram DM", 
-      "Q: Why is this special? A: Because you wont be able to see the Photo before you send it out!"]
+      "Q: What is this app for? \n\ A: With this app you will be able to snap some unique photos!", 
+      "Q: Can I send those photos? \n\ A: You can send them via several Apps!", 
+      "Q: Why is this special? \n\ A: Because you are only able to see photos when you send it out!"]
   },
   {
     title: "Photo",
     data: [
-      "Q: A: ", 
-      "Q: A: ", 
-      "Q: A: "]
+      "Q: Can I send multiple photos at a time? \n\ A: Unfortunately not, you have to send one photo at a time!", 
+      "Q: How many photos can I take? \n\ A: Best thing is to try it!"]
   },
   {
     title: "Share",
     data: [
-      "Q: A: ", 
-      "Q: A: ", 
-      "Q: A: "]
+      "Q: Is the share asynch? \n\ A: Yes, please send one photo only as the function works like that!", 
+      "Q: Which apps can I share to? \n\ A: The most common app´s to share are WhatsApp or Discord!"]
   },
   {
     title: "Camera Roll",
-    data: ["Q: Can I access my recent taken Photos? A: The Camera Roll will be available in the next version"]
+    data: ["Q: Can I access my recent taken Photos? \n\ A: The Camera Roll will be available in the next version"]
   },
 ];
 
@@ -76,16 +74,22 @@ const styles = StyleSheet.create({
     marginHorizontal: 16
   },
   item: {
-    backgroundColor: "#f9c2ff",
+    //backgroundColor: "#F23005",
     padding: 20,
     marginVertical: 8
   },
   header: {
     fontSize: 32,
-    backgroundColor: "#fff"
+    backgroundColor: "#F23005",
+    textAlign: "center",
+    paddingVertical: 8,
+    borderWidth: 4,
+    borderColor: '#97A6A4',
+    borderRadius: 6,
   },
   title: {
-    fontSize: 24
+    fontSize: 24,
+    textAlign: "center"
   }
 });
 

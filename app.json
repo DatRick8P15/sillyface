@@ -3,6 +3,10 @@
     "name": "sillyface",
     "slug": "sillyface",
     "version": "1.0.0",
+    "splash": {
+                "image": "./assets/splash.png", 
+                "backgroundColor": "#F23005"
+},
     "assetBundlePatterns": [
       "**/*"
     ]

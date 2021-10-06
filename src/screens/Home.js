@@ -10,9 +10,10 @@ import {
   View,
   Linking,
   ActivityIndicator,
-   Button, 
+  Button, 
    Image,
-   ImageBackground
+  TouchableOpacity,
+  ImageBackground
 } from 'react-native';
 import { NavigationContainer,useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -28,7 +29,7 @@ export default function Home({navigation}) {
     const [name, setName] = useState('Patrick');
     return (
     <SafeAreaView style={styles.container}>
-      <ImageBackground source={require('../images/1.png')} style={styles.background}>
+      
     <View style={styles.body}>
       <Image
         source={require('../images/1.png')}
@@ -37,10 +38,10 @@ export default function Home({navigation}) {
       />
 
       <View style={styles.greeting}>
-        <Text style={styles.text}>Welcome to Silly Faces</Text>
+        <Text style={styles.text}>Get your silly face shot!</Text>
         <Text style={styles.text}>Hello {name}!</Text>
       </View>
-    
+
       <View style={styles.helpbutton}>
         <Button
           ViewComponent={LinearGradient}
@@ -69,7 +70,7 @@ export default function Home({navigation}) {
         />
       </View>
     </View>
-    </ImageBackground>
+    
   </SafeAreaView>
   );
 }
@@ -81,15 +82,13 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     alignItems: 'stretch', 
     justifyContent: 'flex-start', 
-    borderColor: '#777',
-    borderRadius: 20,
     padding: 10,
   },
     body: { 
     flex: 2,
     flexDirection: 'column',
     maxHeight: '90%',
-    backgroundColor: 'blue',
+    backgroundColor: '#97A6A4',
     alignItems: 'center', 
     justifyContent: 'flex-start',
     margin:0,
@@ -97,12 +96,10 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'black',
-    fontFamily: 'Helvetica',
-    fontSize: 20,
-    fontStyle: 'italic',
+    fontSize: 24,
     margin: 10,
     textAlign: 'center',
-    textShadowColor: 'grey',
+    textShadowColor: '#F23005',
   },
   background: {
     flex: 1,
