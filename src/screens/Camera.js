@@ -58,6 +58,7 @@ export default function CameraScreen() {
                   ? Camera.Constants.Type.front
                   : Camera.Constants.Type.back
               );
+              autoFocus: true;
             }}>
             <Text style={styles.text}> Flip </Text>
           </TouchableOpacity>
@@ -78,26 +79,35 @@ export default function CameraScreen() {
 }
 
 const styles = StyleSheet.create({
-    body: {
-        flex: 1,
-    },
     container: {
         flex: 1,
-        width: 300,
-        height: 800
+        alignItems: 'center',
+        justifyContent: 'center',   
+    },
+    text: { 
+      fontSize: 20,
     },
     camera: {
         flex: 1,
-        width: 300,
-        height: 800
+        width: "100%",
     },
     buttonContainer: {
+        position: 'absolute',
+        width: "100%",
+        padding: 20,
         flex: 1,
         backgroundColor: 'transparent',
         flexDirection: 'row',
+        justifyContent: 'space-between',
     },
     button: {
-        flex: 0.1,
+        //flex: 0.1,
+        width: 120,
+        height: 40,
+        bottom: 0,
+        borderRadius: 50,
+        backgroundColor: 'blue',
+        flexDirection: 'row',
         alignSelf: 'flex-end',
         alignItems: 'center',
     }

@@ -32,24 +32,19 @@ export default function Home({navigation}) {
       
     <View style={styles.body}>
       <Image
-        source={require('../images/1.png')}
+        source={require('../images/silly.png')}
         style={{ width: 200, height: 200 }}
         PlaceholderContent={<ActivityIndicator />}
       />
 
       <View style={styles.greeting}>
-        <Text style={styles.text}>Get your silly face shot!</Text>
+        
         <Text style={styles.text}>Hello {name}!</Text>
       </View>
 
       <View style={styles.helpbutton}>
+        
         <Button
-          ViewComponent={LinearGradient}
-          linearGradientProps={{
-            colors:['red', 'grey'],
-            start:{x:0,y:0.5},
-            end:{x:1,y:0.5},
-          }}
           touchSoundDisabled={true}
           title={'Go to Help'}
           onPress={() => { navigation.navigate('Help')}}
@@ -58,17 +53,15 @@ export default function Home({navigation}) {
 
       <View style={styles.snapbutton}>
         <Button
-          ViewComponent={LinearGradient}
-          linearGradientProps={{
-            colors:['blue', 'grey'],
-            start:{x:0,y:0.5},
-            end:{x:1,y:0.5},
-          }}
           touchSoundDisabled={true}
           title={'Snap your silly Face!'}
           onPress={() => { navigation.navigate('Camera') }}
         />
       </View>
+      <View>
+          <Text style={styles.text}>Get your silly face shot!</Text>
+      </View>
+
     </View>
     
   </SafeAreaView>
@@ -100,6 +93,9 @@ const styles = StyleSheet.create({
     margin: 10,
     textAlign: 'center',
     textShadowColor: '#F23005',
+  },
+  greeting: {
+    
   },
   background: {
     flex: 1,

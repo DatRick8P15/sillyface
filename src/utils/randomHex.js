@@ -8,6 +8,8 @@ const randomHexColor = () => {
   });
 };
 
+/*
+
 const App = () => {
   const [rippleColor, setRippleColor] = useState(randomHexColor());
   const [rippleOverflow, setRippleOverflow] = useState(false);
@@ -27,6 +29,11 @@ const App = () => {
   );
 };
 
+
+
+export default App;
+*/
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -39,4 +46,3 @@ const styles = StyleSheet.create({
   text: { alignSelf: 'center' },
 });
 
-export default App;

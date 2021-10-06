@@ -18,7 +18,7 @@ const Stack = createNativeStackNavigator();
 
 
 export default function App() {
-  const [appIsReady, setAppIsReady] = useState(false);
+  /*const [appIsReady, setAppIsReady] = useState(false);
   useEffect(() => {
     async function prepare() {
       try {
@@ -53,7 +53,7 @@ export default function App() {
 
       if (!appIsReady) {
         return null;
-      }
+      }*/
 
   return (
     
