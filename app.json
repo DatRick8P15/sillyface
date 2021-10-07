@@ -1,15 +1,24 @@
 {
   "expo": {
     "name": "sillyface",
+    "icon": "./assets/icon.png",
     "slug": "sillyface",
     "version": "1.0.0",
     "splash": {
-      "image": "./assets/splash.png",
-      "backgroundColor": "#F23005"
+      "image": "./assets/splash.png"
     },
+    "platforms": [
+      "android"
+    ],
+    "backgroundColor": "#FFFFFF",
+    "primaryColor": "#FFFFFF",
     "assetBundlePatterns": [
       "**/*"
     ],
+    "android": {
+      "package": "com.yourcompany.yourappname",
+      "versionCode": 1
+    },
     "description": "Sillyface Photobox App",
     "githubUrl": "https://github.com/DatRick8P15/sillyface"
   },

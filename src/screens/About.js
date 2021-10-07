@@ -39,7 +39,7 @@ const DATA = [
   },
   {
     title: "Future",
-    data: ["Q: Can I access my recent taken Photos? \n\ A: The Camera Roll will be available in the next version"]
+    data: ["Q: What can we expect in the future? \n\ A: A lot!"]
   },
 ];
 
