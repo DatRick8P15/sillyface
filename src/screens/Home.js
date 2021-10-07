@@ -18,7 +18,8 @@ import {
 import { NavigationContainer,useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 //import { useFonts } from '@expo-google-fonts/inter';
-
+import { Feather } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
 import LinearGradient from 'expo-linear-gradient';
 
 
@@ -29,41 +30,42 @@ export default function Home({navigation}) {
     const [name, setName] = useState('Patrick');
     return (
     <SafeAreaView style={styles.container}>
-      
     <View style={styles.body}>
       <Image
         source={require('../images/silly.png')}
         style={{ width: 200, height: 200 }}
         PlaceholderContent={<ActivityIndicator />}
       />
-
       <View style={styles.greeting}>
-        
         <Text style={styles.text}>Hello {name}!</Text>
       </View>
-
-      <View style={styles.helpbutton}>
-        
-        <Button
-          touchSoundDisabled={true}
-          title={'Go to Help'}
-          onPress={() => { navigation.navigate('Help')}}
-        />
-      </View>
-
       <View style={styles.snapbutton}>
         <Button
           touchSoundDisabled={true}
-          title={'Snap your silly Face!'}
+          title={'Click'}
           onPress={() => { navigation.navigate('Camera') }}
         />
       </View>
       <View>
-          <Text style={styles.text}>Get your silly face shot!</Text>
+          <Text style={styles.text}>Snap your silly Face!</Text>
       </View>
-
     </View>
-    
+    <View style={styles.helpbutton}>
+        <Feather
+          name="help-circle"
+          touchSoundDisabled={true}
+          size={24}
+          color="black"
+          onPress={() => { navigation.navigate('Help')}}
+        />
+        <AntDesign
+          name="exclamation"
+          touchSoundDisabled={true}
+          size={24}
+          color="black"
+          onPress={() => { navigation.navigate('About')}}
+        />
+      </View>
   </SafeAreaView>
   );
 }
@@ -92,10 +94,13 @@ const styles = StyleSheet.create({
     fontSize: 24,
     margin: 10,
     textAlign: 'center',
-    textShadowColor: '#F23005',
   },
   greeting: {
-    
+    color: 'black',
+    fontSize: 24,
+    margin: 10,
+    textAlign: 'center',
+    textShadowColor: '#F23005',
   },
   background: {
     flex: 1,
@@ -105,15 +110,17 @@ const styles = StyleSheet.create({
   helpbutton: {
     width: 150,
     height: 60,
-    borderWidth: 10,
-    borderColor: 'yellow',
-    borderRadius: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end',
   },
   snapbutton: {
-    width: 200,
+    
+    width: 60,
     height: 60,
-    borderWidth: 10,
-    borderColor: 'yellow',
-    borderRadius: 20,
+    borderRadius: 90,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 })

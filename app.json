@@ -4,12 +4,14 @@
     "slug": "sillyface",
     "version": "1.0.0",
     "splash": {
-                "image": "./assets/splash.png", 
-                "backgroundColor": "#F23005"
-},
+      "image": "./assets/splash.png",
+      "backgroundColor": "#F23005"
+    },
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "description": "Sillyface Photobox App",
+    "githubUrl": "https://github.com/DatRick8P15/sillyface"
   },
   "name": "sillyface"
 }
